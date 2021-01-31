@@ -14,6 +14,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="376dp"
+            android:layout_height="251dp"
+            android:layout_marginStart="50dp"
+            android:text="Bye!"
+            android:textColor="@color/black"
+            android:textSize="100sp" />
     </LinearLayout>
 
     <Button
@@ -42,15 +50,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="376dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="50dp"
-        android:text="Hello!"
-        android:textColor="@color/black"
-        android:textSize="100sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
