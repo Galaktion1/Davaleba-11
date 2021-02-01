@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_for_app"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -38,7 +39,9 @@
         android:layout_width="366dp"
         android:layout_height="43dp"
         android:layout_marginBottom="15dp"
-        android:hint="პაროლი"
+        android:hint="  პაროლი"
+        android:background="#4F4F57"
+        android:textColorHint="@color/white"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/signInButton"
@@ -54,7 +57,9 @@
         android:layout_marginTop="252dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="ელ.ფოსტა"
+        android:hint="  ელ.ფოსტა"
+        android:background="#4F4F57"
+        android:textColorHint="@color/white"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,33 +69,28 @@
 
     <Button
         android:id="@+id/forgotPassword"
-        android:layout_width="250dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="243dp"
+        android:layout_width="270dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="63dp"
+        android:backgroundTint="#00FFFFFF"
         android:text="დაგავიწყდა პაროლი?"
-        android:textColor="@android:color/black"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInButton" />
 
     <Button
         android:id="@+id/registrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="251dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="270dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#00068722"
         android:text="რეგისტრაცია"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

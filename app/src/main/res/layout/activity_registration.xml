@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_for_app"
     tools:context=".RegistrationActivity">
 
     <LinearLayout
@@ -19,20 +20,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/signUpEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="ელ.ფოსტა"
-            android:inputType="textEmailAddress" />
-
-        <EditText
             android:id="@+id/signUpPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
             android:ems="10"
-            android:hint="პაროლი"
-            android:inputType="textPassword" />
+            android:hint="  პაროლი"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white"
+            tools:background="#4F4F57" />
 
     </LinearLayout>
 
@@ -51,4 +47,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/signUpEmail"
+        android:layout_width="361dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="24dp"
+        android:background="#4F4F57"
+
+        android:ems="10"
+        android:hint="  ელ.ფოსტა"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
