@@ -20,26 +20,28 @@
         android:id="@+id/linearLayout2"
         android:layout_width="264dp"
         android:layout_height="95dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="376dp"
-            android:layout_height="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="Hey!"
+            android:textAlignment="center"
             android:textColor="#A7A7AE"
             android:textSize="40sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/timeToChangePassword"
-        android:layout_width="233dp"
+        android:layout_width="220dp"
         android:layout_height="79dp"
-        android:layout_marginEnd="4dp"
         android:backgroundTint="@color/purple_500"
         android:text="პაროლის შეცვლა"
         android:textSize="20sp"
@@ -50,7 +52,7 @@
 
     <Button
         android:id="@+id/logOutMan"
-        android:layout_width="233dp"
+        android:layout_width="wrap_content"
         android:layout_height="79dp"
         android:background="#FFFFFF"
         android:backgroundTint="@color/white"
@@ -64,13 +66,13 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="543dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
         android:text="თქვენი უნიკალური კოდია:"
         android:textColor="#A7A7AE"
-        android:textSize="30sp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
