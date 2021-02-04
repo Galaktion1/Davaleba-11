@@ -1,5 +1,6 @@
 package com.example.a19.fragments
 
+import android.app.Activity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.View
@@ -24,19 +25,23 @@ class ConverterFragment : Fragment(R.layout.fragment_converter) {
 
 
         val spinner2: Spinner = view.findViewById(R.id.spinner2)
-        ArrayAdapter.createFromResource(this, R.array.coins, android.R.layout.simple_spinner_item)
-            .also {  adapter ->
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinner2.adapter = adapter
-            }
+        activity?.let {
+            ArrayAdapter.createFromResource(it, R.array.coins, android.R.layout.simple_spinner_item)
+                .also {  adapter ->
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    spinner2.adapter = adapter
+                }
+        }
 
 
         val spinner3: Spinner = view.findViewById(R.id.spinner3)
-        ArrayAdapter.createFromResource(this, R.array.coins,android.R.layout.simple_spinner_item)
-            .also {  adapter ->
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinner3.adapter = adapter
-            }
+        activity?.let {
+            ArrayAdapter.createFromResource(it, R.array.coins,android.R.layout.simple_spinner_item)
+                .also {  adapter ->
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    spinner3.adapter = adapter
+                }
+        }
 
 
         mText.text = "BTC Price: $btcPrice \n ETH Price: $ethPrice \n XRP Price: $xrpPrice \n DOT Price: $dotPrice \n ADA Price: $adaPrice"
