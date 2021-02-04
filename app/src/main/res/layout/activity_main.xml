@@ -36,14 +36,15 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="366dp"
+        android:layout_width="373dp"
         android:layout_height="43dp"
         android:layout_marginBottom="15dp"
-        android:hint="  პაროლი"
         android:background="#4F4F57"
-        android:textColorHint="@color/white"
         android:ems="10"
+        android:hint="აროლი"
+        android:paddingStart="8dp"
         android:inputType="textPassword"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/signInButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -57,7 +58,8 @@
         android:layout_marginTop="252dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="  ელ.ფოსტა"
+        android:paddingStart="8dp"
+        android:hint="ელ.ფოსტა"
         android:background="#4F4F57"
         android:textColorHint="@color/white"
         android:inputType="textEmailAddress"
@@ -65,7 +67,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/forgotPassword"

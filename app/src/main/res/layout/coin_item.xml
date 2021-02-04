@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/text_symbol"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/image_view"
             android:layout_marginStart="8dp"
@@ -53,14 +53,14 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/image_view"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="24dp"
             android:text="34027.26"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/image_view"
-            app:layout_constraintEnd_toStartOf="@+id/text_change"
+            app:layout_constraintStart_toEndOf="@+id/text_name"
             app:layout_constraintTop_toTopOf="@+id/image_view" />
 
         <TextView
@@ -70,7 +70,7 @@
             android:layout_alignBottom="@+id/image_view"
             android:layout_marginEnd="8dp"
             android:text="-2.4"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"

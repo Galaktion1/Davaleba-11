@@ -20,15 +20,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:id="@+id/signUpEmail"
+            android:layout_width="361dp"
+            android:layout_height="50dp"
+            android:background="#4F4F57"
+
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="  ელ.ფოსტა"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/white" />
+
+        <EditText
             android:id="@+id/signUpPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#FFFFFF"
             android:ems="10"
             android:hint="  პაროლი"
             android:inputType="textPassword"
             android:textColorHint="@color/white"
-            tools:background="#4F4F57" />
+            android:background="#4F4F57" />
 
     </LinearLayout>
 
@@ -48,18 +59,4 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/signUpEmail"
-        android:layout_width="361dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="24dp"
-        android:background="#4F4F57"
-
-        android:ems="10"
-        android:hint="  ელ.ფოსტა"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

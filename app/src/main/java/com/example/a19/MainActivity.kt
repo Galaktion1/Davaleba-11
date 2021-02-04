@@ -33,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         resetButton=findViewById(R.id.forgotPassword)
         mAuth= FirebaseAuth.getInstance()
 
+
+        if(mAuth.currentUser != null){
+            startActivity(Intent(this,FeedActivity::class.java))
+            finish()
+        }
+
         signInButton.setOnClickListener {
             val email= enterEmail.text.toString()
             val password= enterPassword.text.toString()

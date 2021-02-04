@@ -9,15 +9,15 @@
         android:id="@+id/navigation_main"
         android:name="com.example.a19.fragments.MainFragment"
         tools:layout="@layout/fragment_main"
-        android:label="MainFragment" />
+        android:label="Home" />
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.a19.fragments.DashboardFragment"
         tools:layout="@layout/fragment_dashboard"
-        android:label="DashboardFragment" />
+        android:label="Dashboard" />
     <fragment
         android:id="@+id/navigation_converter"
         android:name="com.example.a19.fragments.ConverterFragment"
         tools:layout="@layout/fragment_converter"
-        android:label="ConverterFragment" />
+        android:label="Converter" />
 </navigation>

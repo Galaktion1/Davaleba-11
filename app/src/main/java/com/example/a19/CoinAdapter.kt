@@ -1,5 +1,6 @@
 package com.example.a19
 
+import android.graphics.Color
 import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,9 @@ class CoinAdapter(private val coinList: List<CoinItem>) : RecyclerView.Adapter<C
         holder.symbol.text = currentItem.symbol
         holder.name.text = currentItem.name
         holder.price.text = currentItem.price
-        holder.change_24h.text = currentItem.change_24h
+        holder.change_24h.text = currentItem.change_24h + "%"
+        if(currentItem.change_24h.contains("-")) holder.change_24h.setTextColor(Color.parseColor("#FF0000"))
+        else holder.change_24h.setTextColor(Color.parseColor("#33cc33"))
     }
 
     override fun getItemCount() = coinList.size
