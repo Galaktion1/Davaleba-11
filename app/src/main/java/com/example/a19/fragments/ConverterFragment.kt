@@ -1,22 +1,15 @@
 package com.example.a19.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.text.TextUtils
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import com.example.a19.R
 
 class ConverterFragment : Fragment(R.layout.fragment_converter) {
-    private lateinit var text_first: TextView
-    private lateinit var text_price: TextView
-    private var operand: Double = 0.0
-    private var operaton: String = ""
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,54 +24,46 @@ class ConverterFragment : Fragment(R.layout.fragment_converter) {
 
 
         val spinner2: Spinner = view.findViewById(R.id.spinner2)
+        ArrayAdapter.createFromResource(this, R.array.coins, android.R.layout.simple_spinner_item)
+            .also {  adapter ->
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                spinner2.adapter = adapter
+            }
+
+
         val spinner3: Spinner = view.findViewById(R.id.spinner3)
+        ArrayAdapter.createFromResource(this, R.array.coins,android.R.layout.simple_spinner_item)
+            .also {  adapter ->
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                spinner3.adapter = adapter
+            }
 
 
         mText.text = "BTC Price: $btcPrice \n ETH Price: $ethPrice \n XRP Price: $xrpPrice \n DOT Price: $dotPrice \n ADA Price: $adaPrice"
         // marto btc, eth, xrp, dot, ada-s fasebia USD-shi
 
-    }
+        val text_first : TextView = view.findViewById(R.id.text_first)
+        if(view is TextView) {
 
-    private fun spinner3() {
-        TODO("Not yet implemented")
-    }
+            var price: String = text_first.text.toString()
+            text_first.text = "1"
 
-    private fun spinner2() {
-
-    }
-
-
-    fun numberClick(view: View) {
-
-        if (view is TextView) {
-
-            val number: String = view.text.toString()
-            var result: String = text_first.text.toString()
-
-            if (result == "0") {
-                result = ""
-            }
-
-            text_first.text = result + number
 
 
         }
-    }
 
+        val text_price : TextView = view.findViewById(R.id.text_price)
+        if(view is TextView) {
 
-    fun operationClick(view: View){
-
-        if (view is TextView) {
-
-            if(!TextUtils.isEmpty(text_first.text)) {
-                operand = text_first.text.toString().toDouble()
-            }
-            this.operaton = view.text.toString()
-
-            text_first.text =""
+            val result: String = text_price.text.toString()
+            text_price.text = ""
 
         }
 
+
+
+
     }
+
 
 }
