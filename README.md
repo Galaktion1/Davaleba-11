@@ -1,5 +1,7 @@
 "# Final "
 
-### About
+### ჩვენს შესახებ
 
-Application converts cryptocurrency Into national currency while taking into account current data.
+აპლიკაცია კრიპტოვალუტას აკონვერტირებს ეროვნულ ვალუტაში, სხვადასხვა კრიპტოვალუტებში. მომხმარებელს შეუძლია აირჩიოს ორი სხვადასხვა ვალუტა და გადაიყვანოს. ფასები მიმდინარეა.
+
+
