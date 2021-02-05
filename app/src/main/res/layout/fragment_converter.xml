@@ -1,58 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/common_google_signin_btn_text_light_default"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_for_app">
 
-    <TableRow
-        android:id="@+id/tableRow2"
+    <TextView
+        android:id="@+id/coin_1"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="BTC"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coin_2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="BTC"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin_1" />
+
+    <TextView
+        android:id="@+id/coin_1_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="3517712"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_1"
+        app:layout_constraintStart_toEndOf="@+id/coin_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coin_2_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="5486484684.5"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_2"
+        app:layout_constraintStart_toEndOf="@+id/coin_2"
+        app:layout_constraintTop_toBottomOf="@+id/coin_1" />
+
+    <Spinner
+        android:id="@+id/coin_from"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="150dp"
+        android:background="@color/white"
+        android:entries="@array/coins"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/price_1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="35478.52"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/coin_from"
+        app:layout_constraintStart_toStartOf="@+id/coin_from"
+        app:layout_constraintTop_toBottomOf="@+id/coin_from" />
+
+    <Spinner
+        android:id="@+id/coin_to"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="150dp"
+        android:background="@color/white"
+        android:entries="@array/coins"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/price_2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="35478.52"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/coin_to"
+        app:layout_constraintStart_toStartOf="@+id/coin_to"
+        app:layout_constraintTop_toBottomOf="@+id/coin_to" />
+
+    <EditText
+        android:id="@+id/amount"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:weightSum="2"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/coin_from"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toBottomOf="@+id/coin_2" />
 
-        <TextView
-            android:id="@+id/price_1"
-            android:layout_width="273dp"
-            android:textSize="40sp"
-            android:textColor="@color/white"
-            android:layout_height="match_parent"
-            android:text="price_1" />
-
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow3"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableRow2">
-
-        <TextView
-            android:id="@+id/price_2"
-            android:layout_width="273dp"
-            android:textColor="@color/white"
-            android:textSize="40sp"
-            android:layout_height="match_parent"
-            android:text="price_2" />
-
-        <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableRow>
+    <ImageButton
+        android:id="@+id/swapBut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_baseline_compare_arrows_24"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_from"
+        app:layout_constraintEnd_toStartOf="@+id/coin_to"
+        app:layout_constraintStart_toEndOf="@+id/coin_from"
+        app:layout_constraintTop_toTopOf="@+id/coin_from" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

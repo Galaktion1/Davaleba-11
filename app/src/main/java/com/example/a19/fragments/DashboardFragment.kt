@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     private lateinit var pInfoTextView: TextView
+    private lateinit var emailTextView: TextView
     private lateinit var passwordChangeButton: Button
     private lateinit var mAuth: FirebaseAuth
     private lateinit var logOutButton: Button
@@ -20,12 +21,14 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mAuth= FirebaseAuth.getInstance()
-        pInfoTextView= view.findViewById(R.id.textView)
+        mAuth = FirebaseAuth.getInstance()
+        pInfoTextView = view.findViewById(R.id.textView)
+        emailTextView = view.findViewById(R.id.emailText)
         passwordChangeButton = view.findViewById(R.id.timeToChangePassword)
         logOutButton = view.findViewById(R.id.logOutMan)
 
-        pInfoTextView.text=mAuth.currentUser?.uid
+        pInfoTextView.text = mAuth.currentUser?.uid
+        emailTextView.text = mAuth.currentUser?.email
         passwordChangeButton.setOnClickListener{
             activity?.startActivity(Intent(activity, PasswordChangeActivity::class.java))
 
