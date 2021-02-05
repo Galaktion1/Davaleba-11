@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/wallpaper_for_app"
+    android:background="@color/common_google_signin_btn_text_light_default"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,12 +17,12 @@
         app:layout_constraintTop_toTopOf="parent" >
 
         <TextView
-            android:id="@+id/text_first"
+            android:id="@+id/price_1"
             android:layout_width="273dp"
             android:textSize="40sp"
             android:textColor="@color/white"
             android:layout_height="match_parent"
-            android:text="TextView" />
+            android:text="price_1" />
 
         <Spinner
             android:id="@+id/spinner2"
@@ -41,12 +41,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tableRow2">
 
         <TextView
-            android:id="@+id/text_price"
+            android:id="@+id/price_2"
             android:layout_width="273dp"
             android:textColor="@color/white"
             android:textSize="40sp"
             android:layout_height="match_parent"
-            android:text="TextView" />
+            android:text="price_2" />
 
         <Spinner
             android:id="@+id/spinner3"
